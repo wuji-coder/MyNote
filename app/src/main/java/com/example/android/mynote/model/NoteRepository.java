@@ -1,9 +1,13 @@
-package com.example.android.mynote.database;
+package com.example.android.mynote.model;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
+
+import com.example.android.mynote.database.Note;
+import com.example.android.mynote.dao.NoteDao;
+import com.example.android.mynote.database.NoteDatabase;
 
 import java.util.List;
 

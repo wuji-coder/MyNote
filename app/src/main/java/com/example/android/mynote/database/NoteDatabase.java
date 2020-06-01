@@ -8,6 +8,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
+import com.example.android.mynote.util.Converters;
+import com.example.android.mynote.dao.NoteDao;
+
 /**
  * 数据库管理
  * @author 98578
@@ -20,7 +23,7 @@ public abstract class NoteDatabase extends RoomDatabase {
 
     private static NoteDatabase INSTANCE;
 
-    synchronized static NoteDatabase getINSTANCE(Context context) {
+    public synchronized static NoteDatabase getINSTANCE(Context context) {
         if (INSTANCE==null) {
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(),NoteDatabase.class,"note_datebase")
                     .build();
